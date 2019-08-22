@@ -1,12 +1,8 @@
 #!/usr/bin/env python
-# _ docker run --rm -e TASKS=task1,task2 -e HOSTS=root@nightwing.cloudezapp.io:22000 -e KEY=$(cat ~/.ssh/id_rsa | awk '{printf "%s\\n", $0}') -v $(pwd):$(pwd) -w $(pwd) borgeslucaz/drone-fabric
 
 import os
 from envparse import Env
 from subprocess import Popen, PIPE
-
-#A=$(cat ~/.ssh/id_rsa | awk '{printf "%s\\n", $0}') _ docker run --rm -e KEY=$A -e TASKS=task1,task2 -e HOSTS=root@nightwing.cloudezapp.io:22000 -v $(pwd):$(pwd) -w $(pwd) borgeslucaz/drone-fabric
-#A= _ docker run --rm -e KEY="$(cat ~/.ssh/id_rsa | awk '{printf "%s\\n", $0}')" -e TASKS=task1,task2 -e HOSTS=root@nightwing.cloudezapp.io:22000 -v $(pwd):$(pwd) -w $(pwd) borgeslucaz/drone-fabric
 
 
 def main():
@@ -37,6 +33,4 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-
-
+    
